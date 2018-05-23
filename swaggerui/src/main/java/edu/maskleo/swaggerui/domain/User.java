@@ -12,13 +12,13 @@ import lombok.NoArgsConstructor;
 @ApiModel("用户")
 public class User {
 
-    @ApiModelProperty(name = "主键", required = true)
+    @ApiModelProperty(value = "主键", required = true)
     private int id;
 
-    @ApiModelProperty(name = "用户名", required = true)
+    @ApiModelProperty(value = "用户名", required = true)
     private String username;
 
-    @ApiModelProperty(name = "年龄", required = true)
+    @ApiModelProperty(value = "年龄", required = true)
     private int age;
 
 }

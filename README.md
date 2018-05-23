@@ -2,7 +2,7 @@
 
 ## TODO
 
-- [ ] 不能展示参数的 `ApiModelProperty` 注解内容
+- [x] 不能展示参数的 `ApiModelProperty` 注解内容
 
 ## 依赖
 
