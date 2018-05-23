@@ -65,3 +65,7 @@ public class SwaggeruiApplication {
 - `@ApiError` ：发生错误返回的信息
 - `@ApiImplicitParam`：一个请求参数
 - `@ApiImplicitParams`：多个请求参数
+
+## LICENSE
+
+![](LICENSE.png)
