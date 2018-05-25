@@ -1,8 +1,13 @@
 # springboot-swaggerUI
 
-## TODO
+## 自定义
 
-- [x] 不能展示参数的 `ApiModelProperty` 注解内容
+- 修改默认的 `api` 排序方式
+
+  1. 解压 `springfox-swagger-ui` 的内容到 `resources` 下
+  2. 找到 `springfox.js` `window.swaggerUi = new SwaggerUi({` 添加 `operationsSorter : "method",`
+  3. 参考 [sort-api-methods-in-swagger-ui](https://stackoverflow.com/questions/24951268/sort-api-methods-in-swagger-ui)
+  
 
 ## 依赖
 

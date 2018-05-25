@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/springboot-swaggerUI.iml" filepath="$PROJECT_DIR$/springboot-swaggerUI.iml" />
       <module fileurl="file://$PROJECT_DIR$/swaggerui/swaggerui.iml" filepath="$PROJECT_DIR$/swaggerui/swaggerui.iml" />
+      <module fileurl="file://$PROJECT_DIR$/swaggerui/swaggerui.iml" filepath="$PROJECT_DIR$/swaggerui/swaggerui.iml" />
     </modules>
   </component>
 </project>

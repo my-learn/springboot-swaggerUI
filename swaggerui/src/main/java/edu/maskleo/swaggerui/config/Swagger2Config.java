@@ -15,6 +15,7 @@ public class Swagger2Config {
     @Bean
     public Docket createRestApi() {
         return new Docket(DocumentationType.SWAGGER_2)
+                .enable(true)
                 .apiInfo(apiInfo())
                 .select()
                 .apis(RequestHandlerSelectors.basePackage("edu.maskleo.swaggerui.controller"))
