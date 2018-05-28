@@ -9,6 +9,19 @@
   3. 参考 [sort-api-methods-in-swagger-ui](https://stackoverflow.com/questions/24951268/sort-api-methods-in-swagger-ui)
   
 
+## 控制API页面展示
+
+```java
+public Docket createRestApi() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .enable(true)
+```
+
+## 页面编辑API
+
+http://editor.swagger.io/
+http://editor2.swagger.io/
+
 ## 依赖
 
 ```xml
@@ -29,14 +42,15 @@
 
 ```java
 @Bean
-public Docket createRestApi() {
-    return new Docket(DocumentationType.SWAGGER_2)
-            .apiInfo(apiInfo())
-            .select()
-            .apis(RequestHandlerSelectors.basePackage("cn.saytime.web"))
-            .paths(PathSelectors.any())
-            .build();
-}
+    public Docket createRestApi() {
+        return new Docket(DocumentationType.SWAGGER_2)
+                .enable(true)
+                .apiInfo(apiInfo())
+                .select()
+                .apis(RequestHandlerSelectors.basePackage("edu.maskleo.swaggerui.controller"))
+                .paths(PathSelectors.any())
+                .build();
+    }
 
 private ApiInfo apiInfo() {
     return new ApiInfoBuilder()
