@@ -7,7 +7,22 @@
   1. 解压 `springfox-swagger-ui` 的内容到 `resources` 下
   2. 找到 `springfox.js` `window.swaggerUi = new SwaggerUi({` 添加 `operationsSorter : "method",`
   3. 参考 [sort-api-methods-in-swagger-ui](https://stackoverflow.com/questions/24951268/sort-api-methods-in-swagger-ui)
-  
+
+- `methods` 排序
+
+- https://github.com/springfox/springfox/blob/master/springfox-swagger2/src/main/java/springfox/documentation/swagger2/mappers/ServiceModelToSwagger2Mapper.java#L156
+
+```java
+   protected Map<String, Path> mapApiListings(Multimap<String, ApiListing> apiListings) {
+     Map<String, Path> paths = newTreeMap();
+     for (ApiListing each : apiListings.values()) {
+       for (ApiDescription api : each.getApis()) {
+         paths.put(api.getPath(), mapOperations(api, Optional.fromNullable(paths.get(api.getPath()))));
+       }
+     }
+     return paths;
+   }
+```
 
 ## 控制API页面展示
 
